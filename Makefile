@@ -15,12 +15,12 @@ OBJ_B = ${SRC_B:.c=.o}
 all : ${NAME}
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGES) $(OBJ) -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	$(CC) $(FLAGES) $(OBJ) -lXext -lX11 -lm -lmlx -o $(NAME)
 
 bonus : $(NAME_B)
 
 $(NAME_B): $(OBJ_B)
-	$(CC) $(FLAGES) $(OBJ_B) -lmlx -framework OpenGL -framework AppKit -o $(NAME_B)
+	$(CC) $(FLAGES) $(OBJ_B) -lXext -lX11 -lm -lmlx -o $(NAME_B)
 clean :
 	${RM} ${OBJ} ${OBJ_B}
 fclean : clean

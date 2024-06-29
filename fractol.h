@@ -17,6 +17,8 @@
 # include <mlx.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <X11/X.h>
+# include <X11/keysym.h>
 
 typedef struct s_complex
 {

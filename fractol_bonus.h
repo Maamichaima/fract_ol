@@ -15,6 +15,8 @@
 
 # include <math.h>
 # include <mlx.h>
+# include <X11/X.h>
+# include <X11/keysym.h>
 # include <stdlib.h>
 # include <unistd.h>
 

@@ -14,22 +14,22 @@
 
 void	shifting(int keycode, t_fractol *vars)
 {
-	if (keycode == 125)
+	if (keycode == XK_Down)
 	{
 		vars->i_max -= vars->shift;
 		vars->i_min -= vars->shift;
 	}
-	if (keycode == 126)
+	if (keycode == XK_Up)
 	{
 		vars->i_max += vars->shift;
 		vars->i_min += vars->shift;
 	}
-	if (keycode == 124)
+	if (keycode == XK_Right)
 	{
 		vars->r_max -= vars->shift;
 		vars->r_min -= vars->shift;
 	}
-	if (keycode == 123)
+	if (keycode == XK_Left)
 	{
 		vars->r_max += vars->shift;
 		vars->r_min += vars->shift;
@@ -49,7 +49,7 @@ void	etiration(int keycode, t_fractol *vars)
 
 void	reset(int keycode, t_fractol *vars)
 {
-	if (keycode == 49)
+	if (keycode == XK_space)
 	{
 		vars->i_max = 2;
 		vars->i_min = -2;
@@ -63,21 +63,21 @@ void	reset(int keycode, t_fractol *vars)
 
 void	colors(int keycode, t_fractol *vars)
 {
-	if (keycode == 15)
+	if (keycode == XK_r)
 		vars->c = 'r';
-	if (keycode == 11)
+	if (keycode == XK_b)
 		vars->c = 'b';
-	if (keycode == 13)
+	if (keycode == XK_w)
 		vars->c = 'w';
-	if (keycode == 31)
+	if (keycode == XK_o)
 		vars->c = 'o';
-	if (keycode == 9)
+	if (keycode == XK_v)
 		vars->c = 'v';
 }
 
 int	key_hook(int keycode, t_fractol *vars)
 {
-	if (keycode == 53)
+	if (keycode == XK_Escape)
 	{
 		ft_free(vars);
 		exit(0);
